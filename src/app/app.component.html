@@ -1,0 +1,83 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="data.users">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="firstName">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="lastName">
+            <th mat-header-cell *matHeaderCellDef>lastName</th>
+            <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="maidenName">
+            <th mat-header-cell *matHeaderCellDef>MaidName</th>
+            <td mat-cell *matCellDef="let element"> {{element.maidenName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="age">
+            <th mat-header-cell *matHeaderCellDef>AGE</th>
+            <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+        </ng-container>
+        <ng-container matColumnDef="gender">
+            <th mat-header-cell *matHeaderCellDef>Gender</th>
+            <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef>Email</th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+        <ng-container matColumnDef="phone">
+            <th mat-header-cell *matHeaderCellDef>Phon</th>
+            <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+        </ng-container>
+        <ng-container matColumnDef="username">
+            <th mat-header-cell *matHeaderCellDef>UserName</th>
+            <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+        </ng-container>
+        <ng-container matColumnDef="password">
+            <th mat-header-cell *matHeaderCellDef>Password</th>
+            <td mat-cell *matCellDef="let element"> {{element.password}} </td>
+        </ng-container>
+        <ng-container matColumnDef="birthDate">
+            <th mat-header-cell *matHeaderCellDef>BirthDate</th>
+            <td mat-cell *matCellDef="let element"> {{element.birthDate}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="bloodGroup">
+            <th mat-header-cell *matHeaderCellDef>BloodGroup</th>
+            <td mat-cell *matCellDef="let element"> {{element.bloodGroup}} </td>
+        </ng-container>
+        <ng-container matColumnDef="height">
+            <th mat-header-cell *matHeaderCellDef>Height</th>
+            <td mat-cell *matCellDef="let element"> {{element.height}} </td>
+        </ng-container>
+        <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef>Weight</th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+        </ng-container>
+        <ng-container matColumnDef="eyeColor">
+            <th mat-header-cell *matHeaderCellDef>EyeColor</th>
+            <td mat-cell *matCellDef="let element"> {{element.eyeColor}} </td>
+        </ng-container>
+        <ng-container matColumnDef="domain">
+            <th mat-header-cell *matHeaderCellDef>Domain</th>
+            <td mat-cell *matCellDef="let element"> {{element.domain}} </td>
+        </ng-container>
+        <ng-container matColumnDef="state">
+            <th mat-header-cell *matHeaderCellDef>State</th>
+            <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+    </mat-paginator>
+</div>
